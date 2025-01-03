@@ -16,6 +16,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = "fence.lazy"
---    change_detection = { notify = false }
+  spec = {
+    { import = "fence.lazy" },
+  },
+  change_direction = {
+    nofity = true,
+    enabled = true,
+  },
 })
